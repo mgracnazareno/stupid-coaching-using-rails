@@ -1,3 +1,15 @@
 <%= link_to "Ask another question", ask_path %>
 
-<p><%= params[:message] %></p>
+ <p><%= params[:message] %></p>
+
+ <p>
+   <% if @question.blank?%>
+    <%= "I can't hear your"%>
+   <% elsif %>
+    <% @question.end_with('?') %>
+    <%= @answer%>
+    <% else %>
+    <%= "I don't care, get dressed and go to work!" %>
+   <% end %>
+ </p>
+
